@@ -4,14 +4,57 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SwiperCard from './SwiperCard';
-
+interface phone {
+       name: String,
+       url: String,
+       price: String,
+       newoffer?: boolean,
+       limitedoffer?: boolean,
+       purchaseoffers?:string[]
+     }
+const phones:phone[]=[{
+       name:'Samsung Galaxy S23 5G Snapdragon',
+       url:"/images/s23.png",
+       price:"44999",
+       newoffer:true,
+       purchaseoffers:["EMI","Samsung upgrade","HDFC card offer"]
+      },
+      {
+       name:'Samsung Galaxy Watch4 Classic LTE',
+       url:"/images/watch4.png",
+       price:"9499",
+       newoffer:true,
+       purchaseoffers:["EMI","Samsung upgrade","HDFC card offer"]
+      },
+      {
+        name:'Samsung Galaxy S23 FE',
+        url:"/images/s23FE.png",
+        price:"33999",
+        newoffer:true,
+        purchaseoffers:["EMI","Samsung upgrade","HDFC card offer"]
+       },
+       {
+        name:'Samsung Galaxy S23 Ultra 5G',
+        url:"/images/s23ultra.png",
+        price:"84999",
+        newoffer:true,
+        purchaseoffers:["EMI","Samsung upgrade","HDFC card offer"]
+       },
+       {
+        name:'Samsung Galaxy A35 5G',
+        url:"/images/a35.png",
+        price:"25999",
+        newoffer:true,
+        purchaseoffers:["EMI","Samsung upgrade","HDFC card offer"]
+       },
+      ]
 function HeroCard() {
        var settings = {
               dots: true,
               infinite: false,
               speed: 500,
-              slidesToShow: 5,
-              slidesToScroll: 5,
+              slidesToShow: 4,
+              slidesToScroll: 4,
               initialSlide: 0,
               responsive: [
                      {
@@ -52,17 +95,15 @@ function HeroCard() {
 
        return (
               <>
-               
-                     <Slider {...settings}>
-                            <SwiperCard />
-                            <SwiperCard />
-                            <SwiperCard />
-                            <SwiperCard />
-                            <SwiperCard />
-                            <SwiperCard />
-                            <SwiperCard />
-                            <SwiperCard />
-                     </Slider>
+                <div>
+                <Slider  {...settings}>
+                            
+                            {
+                                   phones.map((obj,index)=><SwiperCard name={obj.name} url={obj.url} price={obj.price} newoffer={obj.newoffer} limitedoffer={obj.limitedoffer}/>)
+                            }
+                </Slider>
+                </div>
+                     
 
                     
 
