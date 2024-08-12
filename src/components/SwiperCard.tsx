@@ -22,7 +22,7 @@ function SwiperCard(item:phone) {
         <h1 className='font-Samsung400 wrap-text'>6GB RAM,128GB ROM</h1>
         <ul>
           {
-          item.purchaseoffers?.map((obj,index)=><li className='list-disc text-green-900'>{obj}</li>)
+          item.purchaseoffers?.map((obj,index)=><li key={index} className='list-disc text-green-900'>{obj}</li>)
           }
          
         </ul>
