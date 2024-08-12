@@ -99,7 +99,7 @@ function HeroCard() {
                 <Slider  {...settings}>
                             
                             {
-                                   phones.map((obj,index)=><SwiperCard name={obj.name} url={obj.url} price={obj.price} newoffer={obj.newoffer} limitedoffer={obj.limitedoffer}/>)
+                                   phones.map((obj,index)=><SwiperCard key={index} name={obj.name} url={obj.url} price={obj.price} newoffer={obj.newoffer} limitedoffer={obj.limitedoffer}/>)
                             }
                 </Slider>
                 </div>
