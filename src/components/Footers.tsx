@@ -13,8 +13,8 @@ function Footers() {
         <h1 className='hover:cursor-pointer text-center text-white'><a href="/ourpolicy" target='blank'>Privacy Policy</a></h1>
       </div>
       <div className='p-4  m-4 '>
-        <h1 className='hover:cursor-pointer text-center text-white'><a href="https://www.samsung.com/" target='blank'>Designed & Maintained by:</a></h1>
-        <h1 className='hover:cursor-pointer text-center text-white'><a href="https://www.samsungexclusivestores.in/" target='blank'>Pixelbay Designs</a></h1>
+        <h1 className='text-center text-white'>Designed & Maintained by:</h1>
+        <h1 className='hover:cursor-pointer text-center text-white'><a href="https://pixelbay.in/" target='blank'>Pixelbay Designs</a></h1>
       </div>
     </div>
   )

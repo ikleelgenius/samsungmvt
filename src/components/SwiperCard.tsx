@@ -10,7 +10,7 @@ interface phone {
 
 function SwiperCard(item:phone) {
   return (
-    <div className='flex flex-col  justify-between border-1 min-h-96  shadow-xl w-60 m-2 border-grey-200 rounded-md items-center' >
+    <div className='flex flex-col  justify-between border-1 min-h-96  shadow-xl w-60  border-grey-200 rounded-md items-center' >
      
       <img src={item.url as string} alt="" />
       <div className='flex'>
