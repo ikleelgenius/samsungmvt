@@ -63,25 +63,23 @@ function HeroCard() {
               cssEase: "linear",
               responsive: [
                      {
-                            breakpoint: 982,
+                            breakpoint: 1200,
                             settings: {
                                    slidesToShow: 3,
-                                   slidesToScroll: 3,
-                                   infinite: true,
-                                   dots: true
+                                   slidesToScroll: 1
                             }
                      },
                     
 
                      {
-                            breakpoint: 640,
+                            breakpoint: 960,
                             settings: {
-                                   slidesToShow: 1,
+                                   slidesToShow: 2,
                                    slidesToScroll: 1
                             }
                      },
                      {
-                            breakpoint: 360,
+                            breakpoint: 520,
                             settings: {
                                    slidesToShow: 1,
                                    slidesToScroll: 1
@@ -92,14 +90,14 @@ function HeroCard() {
 
        return (
               <>
-                     <div>
+                     
                             <Slider {...settings}>
 
                                    {
                                           phones.map((obj, index) => <SwiperCard key={index} name={obj.name} url={obj.url} price={obj.price} newoffer={obj.newoffer} limitedoffer={obj.limitedoffer} />)
                                    }
                             </Slider>
-                     </div>
+                     
 
 
 
